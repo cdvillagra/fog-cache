@@ -1,0 +1,34 @@
+/*
+|--------------------------------------------------------------------------------
+| Cache Fog - DVILLAGRA
+|--------------------------------------------------------------------------------
+|
+| # Constants of front-end
+|
+|--------------------------------------------------------------------------------
+|
+| @author      Christopher Villagra - <christopher@dvillagra.com.br>
+|
+*/
+
+module.exports = {
+
+	title : "Fog-Cache",
+
+	page : {
+				img:{
+						logo:''
+					}, 
+		        menu:[
+		        		{
+		                	nome:'Home',
+		                	url:'/'
+		              	},
+		              	{
+		                	nome:'Contact',
+		                	url:'/contact'
+		              	}
+		            ]
+		    }
+
+}

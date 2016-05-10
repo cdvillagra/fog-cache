@@ -1,0 +1,17 @@
+{
+  "name": "a1mobile-service",
+  "author": {
+              "name": "Christopher Villagra",
+              "email": "christopher@dvillagra.com.br"
+  },
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node client"
+  },
+  "dependencies": {
+    "querystring": "*",
+    "https": "*",
+    "json-rest-client": "*"
+  }
+}

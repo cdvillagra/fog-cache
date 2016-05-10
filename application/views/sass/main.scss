@@ -1,0 +1,78 @@
+/*
+|--------------------------------------------------------------------------------
+| Cache Fog - DVILLAGRA
+|--------------------------------------------------------------------------------
+|
+| # Code Sass Fog-Cache
+// # Code Sass to create public/stylesheets/main.css
+|
+|--------------------------------------------------------------------------------
+|
+| @author      Christopher Villagra - <christopher@dvillagra.com.br>
+|
+*/
+
+/* Sass default */
+
+@import '_mifu';
+
+$background-default : #FFF;
+
+$blocks : noticia banner;
+
+body{
+
+	overflow: hidden;
+
+}
+
+#header{
+
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+
+}
+
+.content{
+
+	@include divCenter(500,300);
+	background: darken($background-default,30%);
+
+	@each $block in $blocks{
+
+		.block-#{$block}{
+			@extend %fla;
+
+			@include responsive(min-width,500px){
+				width: 100%;
+			}
+
+		}
+
+	}
+
+}
+
+// custom properties from bootstrap
+
+.row{
+
+	#myCarousel{
+
+		&.carousel{
+
+			margin: pxToEm(15) 0;
+
+		}
+
+	}
+
+}
+
+.navbar-fixed-bottom{
+	position: relative !important;
+} 
+.navbar-fixed-top{
+	@extend .navbar-fixed-bottom;
+}

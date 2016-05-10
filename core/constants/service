@@ -1,0 +1,28 @@
+/*
+|--------------------------------------------------------------------------------
+| Cache Fog - DVILLAGRA
+|--------------------------------------------------------------------------------
+|
+| # Constants of webservice
+|
+|--------------------------------------------------------------------------------
+|
+| @author      Christopher Villagra - <christopher@dvillagra.com.br>
+|
+*/
+
+module.exports = {
+
+	options	: {
+				url: 'http://localhost',
+				version: '~1.0'
+			  },
+	path	: '/api',
+	key		: {
+				key:'fcf636dc1fda8a7aea1dc598dc725687'
+			  },
+	params : {
+				keyword: ''
+			  }
+
+}

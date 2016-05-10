@@ -1,0 +1,55 @@
+/*
+|--------------------------------------------------------------------------------
+| Cache Fog - DVILLAGRA
+|--------------------------------------------------------------------------------
+|
+| # Open Source Application
+|
+|--------------------------------------------------------------------------------
+|
+| application starter
+|
+| @author      Christopher Villagra - <christopher@dvillagra.com.br>
+|
+*/
+
+//# require dependencies
+var express       = require('express'),
+	load          = require('express-load'),
+	bodyParser    = require('body-parser'),
+	logger        = require('morgan');
+
+//# Instance app
+var app           = express();
+
+//# connect db
+require('./db');
+
+//# add data constants
+app.dataFront 	= require('../core/constants/front');
+app.cliService 	= require('../core/services/client');
+
+//# set View path and engine
+app.set('views', 'application/views');
+app.set('view engine', 'jade');
+
+//# define de path public
+app.use(express.static('public'));
+
+app.use(logger('dev'));
+
+//# Use body parse
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+//# Add files of application
+load('application/models')
+.then('application/middleware')
+.then('application/controllers')
+.then('core/routes')
+.into(app);
+
+//# Inicialize application
+app.listen(3000, function () {
+  console.log('<app_start> : Live on port 3000!');
+});

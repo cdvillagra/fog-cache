@@ -1,0 +1,49 @@
+/*
+|--------------------------------------------------------------------------------
+| Cache Fog - DVILLAGRA
+|--------------------------------------------------------------------------------
+|
+| # Code Sass Fog-Cache
+// # Code Sass to create public/stylesheets/main.css
+|
+|--------------------------------------------------------------------------------
+|
+| @author      Christopher Villagra - <christopher@dvillagra.com.br>
+|
+*/
+/* Sass default */
+.content .block-noticia, .content .block-banner {
+  float: left;
+  position: absolute; }
+
+body {
+  overflow: hidden; }
+
+#header {
+  width: 100%;
+  overflow: hidden;
+  text-align: center; }
+
+.content {
+  left: 50%;
+  top: 50%;
+  width: 31.25em;
+  height: 18.75em;
+  margin-left: -15.625em;
+  margin-top: -9.375em;
+  position: absolute;
+  background: #b3b3b3; }
+  @media (min-width, 500px) {
+    .content .block-noticia {
+      width: 100%; } }
+  @media (min-width, 500px) {
+    .content .block-banner {
+      width: 100%; } }
+
+.row #myCarousel.carousel {
+  margin: 0.9375em 0; }
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+  position: relative !important; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,47 @@
+//
+//--------------------------------------------------------------------------------
+// Cache Fog - DVILLAGRA
+//--------------------------------------------------------------------------------
+//
+// # Partial code Sass
+//
+//--------------------------------------------------------------------------------
+//
+// @author      Christopher Villagra - <christopher@dvillagra.com.br>
+//
+//
+
+// Mixin's and Functions
+
+@mixin divCenter($w,$h){
+	left: 50%;
+	top: 50%;
+	width: pxToEm($w);
+	height: pxToEm($h);
+	margin-left: calcToBase($w);
+	margin-top: calcToBase($h);
+	position: absolute;
+}
+
+@mixin responsive($type,$size){
+
+	@media ($type,$size){
+		@content;
+	} 
+
+}
+
+@function calcToBase($v){
+	@return pxToEm($v) / 2 * (-1);
+}
+
+@function pxToEm($px){
+	@return 1em * $px / 16 ;
+}
+
+%fla{
+
+	float: left;
+	position: absolute;
+
+}

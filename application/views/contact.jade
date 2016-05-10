@@ -1,0 +1,21 @@
+extends inc/layout
+
+block content
+	include inc/header
+	.container
+		ol.breadcrumb
+			li
+				a(href="/") Home
+			li
+				a.active Contact
+		form
+			.form-group
+				label(for="name_listen") Name
+				#name_listen.form-control(type="email", placeholder="Full name")
+			.form-group
+				label(for="phone_listen") Phone
+				#name_listen.form-control(type="text", placeholder="(xx) xxxx-xxxx")
+			.form-group
+				label(for="email_listen") E-mail
+				#name_listen.form-control(type="email", placeholder="Your e-mail")
+			button.btn.btn-default(type="submit") Send

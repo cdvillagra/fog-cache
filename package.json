@@ -1,0 +1,23 @@
+{
+  "name": "fog-cache",
+  "author": {
+              "name": "Christopher Villagra",
+              "email": "christopher@dvillagra.com.br"
+  },
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "stop": "pkill --signal SIGINT fog-cache"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "debug": "~2.2.0",
+    "morgan": "~1.6.1",
+    "express": "~4.13.1",
+    "express-load": "*",
+    "jade": "~1.11.0",
+    "mongoose": "*",
+    "merge": "*"
+  }
+}

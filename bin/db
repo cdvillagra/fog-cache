@@ -1,0 +1,38 @@
+/*
+|--------------------------------------------------------------------------------
+| Cache Fog - DVILLAGRA
+|--------------------------------------------------------------------------------
+|
+| # This code is called to initialize the connection between the application and
+| # the database mongodb
+|
+|--------------------------------------------------------------------------------
+|
+| Initialize mongodb
+|
+| @author      Christopher Villagra - <christopher@dvillagra.com.br>
+|
+*/
+
+//# Require the mongoose module to connect
+var mongoose = require('mongoose');
+
+//# Get constants of database
+var vars = require('../core/constants/conn');
+
+//# Make connector to use on connect function of mongoose
+var uristring = 'mongodb://'+vars.host+'/'+vars.db;
+var mongoOptions = {};
+
+//# Finally the connection
+mongoose.connect(uristring, mongoOptions, function (err, res) {
+
+	//# Check erro on connection
+    if (err) { 
+        console.log('<db_error> : Erro to connect on data base ' + vars.db + '. (' + err + ')');
+    } 
+    else {
+        console.log('<db_start> : Connect on database \'' + vars.db +'\'');
+    }
+    
+});
