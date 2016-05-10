@@ -12,6 +12,7 @@
   "dependencies": {
     "querystring": "*",
     "https": "*",
-    "json-rest-client": "*"
+    "json-rest-client": "*",
+    "restify": "*"
   }
 }
