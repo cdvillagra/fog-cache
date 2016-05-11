@@ -1,5 +1,5 @@
 {
-  "name": "a1mobile-service",
+  "name": "fog-cache-service",
   "author": {
               "name": "Christopher Villagra",
               "email": "christopher@dvillagra.com.br"
@@ -12,6 +12,7 @@
   "dependencies": {
     "querystring": "*",
     "https": "*",
-    "json-rest-client": "*"
+    "json-rest-client": "*",
+    "restify": "*"
   }
 }
